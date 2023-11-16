@@ -38,7 +38,7 @@ function downloadFile(srcBucketName, file) {
   return storage.bucket(srcBucketName).file(file).download();
 }
 
-function transferFile(folder, file, contents, size) {
+async function transferFile(folder, file, contents, size) {
   let storage = new Storage();
   console.log(`Copying file ${file} to Bucket ${destBucketName}, with size ${size}`)
 
